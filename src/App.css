@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'TabbyMono';
+  src: url('../assets/fonts/static/noto-sans-mono-v37-latin-500.woff2');
+  font-weight: normal;
+  font-style: display;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  color: #fff;
+  font-family: 'TabbyMono', monospace;
+  background-image: linear-gradient(to bottom, #020917, #101725);
+}
+
+.content {
+  display: flex;
+  min-height: 100vh;
+  line-height: 1.1;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.content p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.string-tab {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  font-size: xx-large;
+
+  &.selected {
+    background-color: #1e293b;
+  }
+}
+
+.string-header {
+  color: #f8fafc;
+}
+
+.note {
+  color: #f8fafc;
+  margin: 2px 8px;
+  &.selected {
+    background-color: #1e293b;
+  }
+}
+.string-selected {
+  background-color: #1e293b;
+}
+
+.string {
+  padding: 4px 0;
+}
+
+.cursor {
+  background-color: #38bdf8;
+  color: #1e293b;
+  opacity: 100% !important;
+}
+
+@keyframes gentle-pulse {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pulse {
+  animation-name: gentle-pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.command {
+  font-size: 72px;
+}
+
+.tab-grid {
+  display: grid;
+  grid-template-columns: [string-name] 2rem repeat(
+      var(--total-positions),
+      minmax(1.5rem, auto)
+    );
+  align-items: center;
+}
+
+.tab {
+  font-size: 32px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.tab-slice {
+  display: flex;
+  flex-direction: column;
+}
+
+.blank {
+  opacity: 60%;
+}
