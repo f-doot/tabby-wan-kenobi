@@ -5,7 +5,6 @@ import { pluginReact } from '@rsbuild/plugin-react';
 export default defineConfig({
   plugins: [pluginReact()],
   output: {
-    // Crucial: Must start and end with a slash, matching your GitHub repo name
     assetPrefix: '/tabby-wan-kenobi/',
   },
 });
