@@ -114,3 +114,9 @@ body {
 .blank {
   opacity: 60%;
 }
+
+.footer {
+  margin-top: auto;
+  margin-bottom: 1rem;
+  opacity: 50%;
+}

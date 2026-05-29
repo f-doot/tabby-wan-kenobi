@@ -5,6 +5,7 @@ import useKeyboardCommands from './useKeyboardCommands';
 import useBoundStore, { useTabLength } from './store';
 import TabSlice, { TabEnd, TabHeader } from './TabSlice';
 import Help from './Help';
+import Footer from './Footer';
 
 const App = () => {
   const setInitial = useBoundStore((s) => s.setInitial);
@@ -49,6 +50,7 @@ const App = () => {
       </div>
       <div className="command">{currentCommand}</div>
       <Help />
+      <Footer />
     </div>
   );
 };
