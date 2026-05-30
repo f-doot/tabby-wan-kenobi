@@ -25,8 +25,4 @@ const useBoundStore = create<TabbyState>()(
   ),
 );
 
-export function useTabLength() {
-  return useBoundStore((s) => (s.notes[s.stringsInOrder[0]] || []).length);
-}
-
 export default useBoundStore;

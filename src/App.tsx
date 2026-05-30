@@ -2,11 +2,11 @@ import './App.css';
 
 import { useEffect } from 'react';
 import useKeyboardCommands from './useKeyboardCommands';
-import useBoundStore, { useTabLength } from './store';
-import TabSlice, { TabEnd, TabHeader } from './TabSlice';
+import useBoundStore from './store';
+import { TabEnd } from './TabSlice';
 import Help from './Help';
 import Footer from './Footer';
-import Bars from './Bars';
+import Layout from './Layout';
 
 const App = () => {
   const setInitial = useBoundStore((s) => s.setInitial);
@@ -36,22 +36,13 @@ const App = () => {
   };
   const handleDefault = setNote;
   useKeyboardCommands(commands, handleDefault);
-  const tabLength = useTabLength();
 
   return (
     <div className="content">
       <h1>Tabby Wan Kenobi</h1>
       Tab name: {name}
       <div className="tab">
-        <TabHeader />
-        {[...Array(tabLength).keys()].map((position) => (
-          <TabSlice key={position} slicePosition={position} />
-        ))}
-        <TabEnd />
-      </div>
-      <div className="tab">
-        <TabHeader />
-        <Bars />
+        <Layout />
         <TabEnd />
       </div>
       <div className="command">{currentCommand}</div>

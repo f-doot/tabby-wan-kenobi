@@ -21,6 +21,8 @@ export const commands: Record<
         name: curr.name || 'Untitled',
         notes: curr.notes,
         stringsInOrder: curr.stringsInOrder,
+        beatsPerBar: curr.beatsPerBar,
+        barsPerRow: curr.barsPerRow,
       });
     },
     help: 'Upsert the current tab',

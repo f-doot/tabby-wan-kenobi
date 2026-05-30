@@ -103,6 +103,8 @@ body {
 .tab {
   font-size: 32px;
   display: flex;
+
+  flex-wrap: wrap;
   margin: 0 auto;
 }
 
@@ -124,4 +126,5 @@ body {
 .bar {
   display: flex;
   border-right: 1px solid white;
+  padding: 0.5rem;
 }

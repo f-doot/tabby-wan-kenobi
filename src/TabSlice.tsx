@@ -1,7 +1,8 @@
 import classNames from 'classnames';
-import useBoundStore, { useTabLength } from './store';
+import useBoundStore from './store';
 import './App.css';
 import type React from 'react';
+import { useTabLength } from './store/derivedUtils';
 
 type TabSliceProps = {
   slicePosition: number;

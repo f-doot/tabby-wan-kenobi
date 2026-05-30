@@ -23,8 +23,11 @@ export type CommandModeSlice = {
 export type NotationSlice = {
   notes: { [key: string]: Array<Notation> };
   setCurrentNote: (note: Notation) => void;
+  // Feels like this should maybe be a layout slice instead?
   beatsPerBar: number;
   setBeatsPerBar: (beats: number) => void;
+  barsPerRow: number;
+  setBarsPerRow: (barsPerRow: number) => void;
 };
 
 export type PositionSlice = {
@@ -73,6 +76,7 @@ export type TabbyState = ControlSlice &
 export type Tab = {
   name: string;
   beatsPerBar: number;
+  barsPerRow: number;
   stringsInOrder: Array<string>;
   notes: { [key: string]: Array<Notation> };
 };
