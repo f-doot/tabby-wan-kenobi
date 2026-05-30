@@ -23,6 +23,8 @@ export type CommandModeSlice = {
 export type NotationSlice = {
   notes: { [key: string]: Array<Notation> };
   setCurrentNote: (note: Notation) => void;
+  beatsPerBar: number;
+  setBeatsPerBar: (beats: number) => void;
 };
 
 export type PositionSlice = {
@@ -70,6 +72,7 @@ export type TabbyState = ControlSlice &
 
 export type Tab = {
   name: string;
+  beatsPerBar: number;
   stringsInOrder: Array<string>;
   notes: { [key: string]: Array<Notation> };
 };

@@ -22,6 +22,8 @@ const createNotationSlice: StateCreator<TabbyState, [], [], NotationSlice> = (
       set({ notes: newNotes });
     }
   },
+  beatsPerBar: 8,
+  setBeatsPerBar: (beatsPerBar) => set({ beatsPerBar }),
 });
 
 export default createNotationSlice;

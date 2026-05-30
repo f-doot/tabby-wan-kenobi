@@ -6,6 +6,7 @@ import useBoundStore, { useTabLength } from './store';
 import TabSlice, { TabEnd, TabHeader } from './TabSlice';
 import Help from './Help';
 import Footer from './Footer';
+import Bars from './Bars';
 
 const App = () => {
   const setInitial = useBoundStore((s) => s.setInitial);
@@ -46,6 +47,11 @@ const App = () => {
         {[...Array(tabLength).keys()].map((position) => (
           <TabSlice key={position} slicePosition={position} />
         ))}
+        <TabEnd />
+      </div>
+      <div className="tab">
+        <TabHeader />
+        <Bars />
         <TabEnd />
       </div>
       <div className="command">{currentCommand}</div>

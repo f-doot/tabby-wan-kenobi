@@ -120,3 +120,8 @@ body {
   margin-bottom: 1rem;
   opacity: 50%;
 }
+
+.bar {
+  display: flex;
+  border-right: 1px solid white;
+}
